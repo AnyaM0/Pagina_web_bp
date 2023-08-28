@@ -1,127 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Arsenal</title>
     <style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        margin: 0;
-        padding: 0;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
 
-      /* Estilos para el contenedor principal */
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-      }
+        /* Estilos para el contenedor principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-      /* Estilos para el encabezado */
-      .header {
-        width: 100%;
-        height: 100px;
-        background-color: #ef0107;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+        /* Estilos para el encabezado */
+        .header {
+            width: 100%;
+            height: 100px;
+            background-color: #ef0107;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-      /* Estilos para el título */
-      .title {
-        color: white;
-        font-size: 36px;
-        font-weight: bold;
-      }
-      /* Estilos para el título */
-      .title2 {
-        color: black;
-        font-size: 36px;
-        font-weight: bold;
-      }
-      /* Estilos para el audio */
-      .audio {
-        width: 100%;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+        /* Estilos para el título */
+        .title {
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+        }
 
-      /* Estilos para la sección de imágenes */
-      .images {
-        width: 100%;
-        height: 400px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-      }
+        /* Estilos para el título */
+        .title2 {
+            color: black;
+            font-size: 36px;
+            font-weight: bold;
+        }
 
-      /* Estilos para las imágenes */
-      .image {
-        width: 300px;
-        height: 300px;
-        border-radius: 10px;
-      }
+        /* Estilos para el audio */
+        .audio {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-      /* Estilos para la sección de descripción */
-      .description {
-        width: 100%;
-        height: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+        /* Estilos para la sección de imágenes */
+        .images {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
 
-      /* Estilos para el párrafo */
-      .paragraph {
-        color: #333333;
-        text-align: justify;
-        margin-left: 20px;
-        margin-right: 20px;
-      }
+        /* Estilos para las imágenes */
+        .image {
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+        }
 
-      /* Estilos para la sección de jugadores */
-      .players {
-        width: 100%;
-        height: 200px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-      }
+        /* Estilos para la sección de descripción */
+        .description {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-      /* Estilos para los jugadores */
-      .player {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-      }
+        /* Estilos para el párrafo */
+        .paragraph {
+            color: #333333;
+            text-align: justify;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
 
-      /* Estilos para los nombres de los jugadores */
-      .name {
-        color: #333333;
-        text-align: center;
-        margin-top: 10px;
-      }
+        /* Estilos para los nombres de los jugadores */
+        .name {
+            color: #333333;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Estilos para el contenedor de las tarjetas */
+        .card-container {
+            display: flex;
+            /* Esto crea un contenedor flexible */
+            flex-direction: row;
+            /* Esto hace que los elementos se organicen en una fila */
+            flex-wrap: wrap;
+            /* Esto hace que los elementos se ajusten al tamaño del contenedor */
+            justify-content: space-around;
+            /* Esto hace que los elementos tengan un espacio uniforme entre ellos */
+            align-items: center;
+            /* Esto hace que los elementos se alineen verticalmente al centro */
+        }
+
+        .card-image {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s;
+            /* Esto crea una transición suave al cambiar el tamaño */
+        }
+
+        /* Estilos para el efecto de zoom al pasar el clic */
+        .card-container:hover .card-image {
+            transform: scale(1.12);
+        }
+
+        /* Estilos para las tarjetas */
+        .card {
+            width: 200px;
+            height: 300px;
+            margin: 10px;
+            border: 1px solid black;
+            /* Aquí puedes agregar más estilos para las tarjetas */
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
             <span class="title">Arsenal Football Club</span>
-          </div>
+        </div>
         <div class="name">
-            Mi nombre es Ana Maria Perez Aguilar, soy estudiante de 4 semestre de Ing. de Sistemas; mi deporte favorito es el Futbol, asi que esta pagina es para el mejor equipo a mi parecer.
+            Mi nombre es Ana Maria Perez Aguilar, soy estudiante de 4 semestre de Ing. de Sistemas; mi deporte favorito
+            es el Futbol, asi que esta pagina es para el mejor equipo a mi parecer.
         </div>
         <div class="images">
-          <img src="Arsenal.jpg" alt="Logo del Arsenal" class="image" />
-          <img src="Estadio.jpg" alt="Estadio del Arsenal" class="image" />
-          <img src="Equipo.jpg" alt="Equipo del Arsenal" class="image" />
+            <img src="Arsenal.jpg" alt="Logo del Arsenal" class="image" />
+            <img src="Estadio.jpg" alt="Estadio del Arsenal" class="image" />
+            <img src="Equipo.jpg" alt="Equipo del Arsenal" class="image" />
         </div>
-        
-      </div>
+        <div class="title2">
+            <p class="name"> Un poco sobre el Arsenal...</p>
+        </div>
+        <div class="description">
+            <p class="paragraph">El Arsenal Football Club es un club de fútbol profesional con sede en Holloway,
+                Londres, Inglaterra, que juega en la máxima categoría del fútbol de ese país, la Premier League.
+                En términos de trofeos ganados, es el tercer club más exitoso del fútbol inglés con 28 títulos
+                nacionales. El Arsenal fue el primer club del sur de Inglaterra en unirse a la Football League
+                en 1893, y desde entonces ha mantenido la racha más larga en la máxima división, y ha ganado el
+                segundo mayor número de partidos de primera división en la historia del fútbol inglés. El lema
+                del club es Victoria Concordia Crescit, latín para "La victoria crece a través de la armonía".</p>
+        </div>
+        <div class="title2">
+            Jugadores Estelares
+        </div>
+        <div>
+            <div class="card-container">
+                <div class="card">
+                    <img src="bukayo saka.jpg" alt="Imagen de Bukayo Saka" class="card-image">
+                    <p class="card-description">Bukayo Saka es un futbolista británico que juega como centrocampista o
+                        delantero en el Arsenal F. C. de la Premier League de Inglaterra.</p>
+                </div>
+
+                <div class="card">
+                    <img src="gabriel-martinelli-2223-1.jpg" alt="Imagen de Gabriel Mortinelli" class="card-image">
+                    <p class="card-description">Gabriel Teodoro Martinelli Silva es un futbolista brasileño que juega
+                        como delantero en el Arsenal F. C. de la Premier League de Inglaterra.</p>
+                </div>
+
+                <div class="card">
+                    <img src="Gabriel Jesus.jpg" alt="imagen de Gabriel Jesus" class=" card-image">
+                    <p class="card-description">Gabriel Fernando de Jesus es un futbolista brasileño que juega como
+                        delantero en el Arsenal F. C. de la Premier League de Inglaterra.</p>
+                </div>
+
+                <div class="card">
+                    <img src="Martin Odegaard.jpg" alt="Imagen de Martin Odegaard" class="card-image">
+                    <p class="card-description">Martin Ødegaard es un futbolista noruego que juega como centrocampista
+                        en el Arsenal F. C. de la Premier League de Inglaterra, y en la selección de fútbol de Noruega,
+                        equipos de los que es capitán.​Hizo su debut profesional a los 15 años en el Strømsgodset I.</p>
+                </div>
+
+                <div class="card">
+                    <img src="Declan-Rice.jpg" alt="Imagen de Declan Rice" class="card-image">
+                    <p class="card-description">Declan Rice es un futbolista británico que también posee la nacionalidad
+                        irlandesa. Juega de centrocampista en el Arsenal F. C. de la Premier League de Inglaterra. Es
+                        internacional con la selección de Inglaterra</p>
+                </div>
+            </div>
+
+
+        </div>
 </body>
+
 </html>
